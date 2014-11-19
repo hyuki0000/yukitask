@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+if ENV['EDITOR']
+  system("#{ENV['EDITOR']} TODO")
+else
+  puts "Set your EDITOR environment variable."
+end
+
+# vim: set filetype=ruby:
