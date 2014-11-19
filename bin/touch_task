@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+JSON_FILENAME = "~/.yukitask/log.json"
+
+date = Time.now.strftime("%Y-%m-%d")
+pwd = Dir.getwd
+hash = { 'pwd' => pwd, 'date' => date }
+
+ar = []
+File::open(File.expand_path(JSON_FILENAME)) do |file|
+  ar = JSON.load(file)
+  ar << hash
+end
+
+File::open(File.expand_path(JSON_FILENAME), "w") do |file|
+  file.puts(JSON.pretty_generate(ar))
+end
+
+system("update_graph")
+
+# vim: set filetype=ruby:
