@@ -3,3 +3,6 @@ all:
 
 e:
 	@echo You are executing \'e\' command.  Please edit your \'makefile\'.
+
+show:
+	@echo You are executing \'show\' command.  Please edit your \'makefile\'.

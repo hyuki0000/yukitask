@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-system("touch_task; make")
-
-# vim: set filetype=ruby:

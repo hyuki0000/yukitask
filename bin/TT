@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-if ENV['EDITOR']
-  system("#{ENV['EDITOR']} #{File.expand_path('~/.yukitask/TODO')}")
-else
-  puts "Set your EDITOR environment variable."
-end
-
-# vim: set filetype=ruby:
