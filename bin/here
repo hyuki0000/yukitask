@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+ALIAS_FILE = '~/.yukitask/here_aliases'
+
+if ARGV.length != 1
+  puts "Usage: here project-code"
+  puts "Example: here foo"
+  abort
+end
+
+PROJECT_CODE = ARGV[0]
+
+CMDLINE = "alias #{PROJECT_CODE}='pushd #{Dir.pwd}; show_todo'"
+
+File::open(File.expand_path(ALIAS_FILE), "a+") do |f|
+  f.puts(CMDLINE)
+end
+
+puts "#{ALIAS_FILE} is updated.\n#{CMDLINE}"
+
+system("echo source #{ALIAS_FILE} | pbcopy")
+puts "Execute Command+V on the command line to update aliases."
+
+# vim: set filetype=ruby:
