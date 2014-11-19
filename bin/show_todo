@@ -1,0 +1,29 @@
+#!/usr/bin/ruby
+
+COMMON_TODO = '$HOME/.yukitask/TODO'
+CURRENT_TODO = 'TODO'
+PARENTS = 3
+
+RED = "\033[31m"
+BLUE = "\033[34m"
+DEFAULT = "\033[0m"
+
+print BLUE
+system("cat #{COMMON_TODO}")
+print RED
+
+todo = CURRENT_TODO
+PARENTS.times do
+  if File.exists?(todo)
+    if todo != CURRENT_TODO
+      puts "(This TODO is not in the current directory.)"
+    end
+    system("cat #{todo}")
+    break
+  else
+    todo = '../' + todo
+  end
+end
+print DEFAULT
+
+# vim: set filetype=ruby:
