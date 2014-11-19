@@ -1,0 +1,5 @@
+all:
+	@echo You are executing \'mk\' command.  Please edit your \'makefile\'.
+
+e:
+	@echo You are executing \'e\' command.  Please edit your \'makefile\'.
