@@ -8,7 +8,9 @@ http://yukitask.textfile.org/
 * mv yukitask ~/
 * Add following lines at end of your ~/.bashrc.
 
-    export EDITOR=vim
-    PATH=~/yukitask:$PATH
-    source ~/yukitask/command_aliases
-    source ~/yukitask/here_aliases
+``` sh
+export EDITOR=vim
+PATH=~/yukitask:$PATH
+source ~/yukitask/command_aliases
+source ~/yukitask/here_aliases
+```
