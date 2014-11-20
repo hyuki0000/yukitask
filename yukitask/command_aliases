@@ -1,3 +1,4 @@
+# vim: set filetype=sh:
 if test "$EDITOR" = "" ; then
   echo "YukiTask: Warning: 'EDITOR' is not set."
 fi
@@ -8,4 +9,4 @@ alias show='make show'
 alias main='make main'
 alias m='$EDITOR makefile'
 alias T='$EDITOR TODO'
-alias TT='$EDITOR ~/.yukitask/TODO'
+alias TT='$EDITOR ~/yukitask/TODO'

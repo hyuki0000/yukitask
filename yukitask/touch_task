@@ -2,7 +2,7 @@
 
 require 'json'
 
-JSON_FILENAME = "~/.yukitask/log.json"
+JSON_FILENAME = "~/yukitask/log.json"
 
 date = Time.now.strftime("%Y-%m-%d")
 pwd = Dir.getwd
