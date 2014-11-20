@@ -5,7 +5,13 @@ http://yukitask.textfile.org/
 ## INSTALL
 
 * Download zip and extract it.
-* mv yukitask ~/
+
+* Move YukiTask files to your home directory.
+
+```
+$ mv yukitask ~/
+```
+
 * Add following lines at end of your ~/.bashrc.
 
 ``` sh
@@ -14,3 +20,16 @@ PATH=~/yukitask:$PATH
 source ~/yukitask/command_aliases
 source ~/yukitask/here_aliases
 ```
+
+* Reload `~/.bashrc'
+
+```
+$ source ~/.bashrc
+```
+
+* That is all.
+
+## TUTORIAL
+
+Under construction.
+
