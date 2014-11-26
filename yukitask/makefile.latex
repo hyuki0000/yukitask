@@ -3,7 +3,7 @@ current = mychapter
 
 all:
 	platex $(main).tex
-        dvipdfmx $(main).dvi
+	dvipdfmx $(main).dvi
 	open $(main).pdf
 
 e:
