@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-ALIAS_FILE = '~/yukitask/here_aliases'
+ALIAS_FILE = '$YUKITASKHOME/here_aliases'
 
 if ARGV.length != 1
   puts "Usage: here project-code"

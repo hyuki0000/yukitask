@@ -3,16 +3,16 @@
 require 'json'
 require 'date'
 
-load '~/yukitask/config.rb'
+load '$YUKITASKHOME/config.rb'
 
 PREFIX_PATHS = CONFIG["PREFIX_PATHS"]
 W = 16
 H = 16
 PADDING = 2
 RECENT_DAYS = 10
-LOG_FILENAME = "~/yukitask/log.json"
-GRAPH_FILENAME = "~/yukitask/graph.html"
-GRAPH_RECENT_FILENAME = "~/yukitask/graph-recent.html"
+LOG_FILENAME = "$YUKITASKHOME/log.json"
+GRAPH_FILENAME = "$YUKITASKHOME/graph.html"
+GRAPH_RECENT_FILENAME = "$YUKITASKHOME/graph-recent.html"
 
 def write_svg(a, filename, width, height)
   d = Hash.new {|hash, key| hash[key] = Hash.new(0) }

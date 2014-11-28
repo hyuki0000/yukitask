@@ -16,9 +16,10 @@ $ mv yukitask ~/
 
 ``` sh
 export EDITOR=vim
-PATH=~/yukitask:$PATH
-source ~/yukitask/command_aliases
-source ~/yukitask/here_aliases
+export YUKITASKHOME=~/yukitask
+PATH=$YUKITASKHOME:$PATH
+source $YUKITASKHOME/command_aliases
+source $YUKITASKHOME/here_aliases
 ```
 
 * Reload `~/.bashrc'
