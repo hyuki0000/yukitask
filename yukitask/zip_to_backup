@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+load '~/yukitask/config.rb'
+DESTDIR = CONFIG["BACKUP_DESTDIR"]
+
+if ARGV.length < 2
+  puts "Usage: zip_to_backup projectname srcdirname ... "
+  puts "Example: 1) zip_to_backup girldoc doc"
+  puts "It will create #{DESTDIR}/girldoc_yyyy-mm-dd-hhmmss.zip."
+  puts
+  puts "Example: 2) zip_to_backup notetex note/*.tex tex images"
+  puts "It will create #{DESTDIR}/notetex_yyyy-mm-dd-hhmmss.zip."
+  abort
+end
+PROJECTNAME = ARGV.shift
+SRCDIRNAME = ARGV.join(' ')
+ZIPNAME = Time.now.strftime("#{DESTDIR}/#{PROJECTNAME}_%Y-%m-%d-%H%M%S.zip")
+COMMAND = "zip -r #{ZIPNAME} #{SRCDIRNAME}"
+puts "Executing #{COMMAND}...";
+system(COMMAND);
+puts "#{ZIPNAME} is created."
+
+# vim: set filetype=ruby:
