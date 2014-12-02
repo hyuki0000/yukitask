@@ -29,7 +29,7 @@ $ source ~/.bashrc
 
 * That is all.
 
-## TUTORIAL
+## Web site
 
-Under construction.
+http://yukitask.textfile.org
 
