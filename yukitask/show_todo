@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-COMMON_TODO = '$HOME/yukitask/TODO'
+COMMON_TODO = '$YUKITASKHOME/TODO'
 CURRENT_TODO = 'TODO'
 PARENTS = 3
 
